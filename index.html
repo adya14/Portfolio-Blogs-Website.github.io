@@ -5,30 +5,33 @@
     <link rel="icon" type="image/png" href="assets/img/tab.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adya Tiwari — AI/ML Engineer building LLM-powered systems, agentic workflows, and production AI features.">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Adya's Portfolio</title>
+    <title>Adya Tiwari — AI/ML Engineer</title>
 </head>
 
 <body>
     <div class="cursor"></div>
     <div class="cursor-shadow"></div>
+
     <!--===== HEADER =====-->
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Adya</a>
-            </div>
+        <nav class="nav">
+            <a href="#home" class="nav__logo">Adya<span>.</span></a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#certifications" class="nav__link">Certs</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     <li class="nav__item"><a href="blog.html" class="nav__link">Blogs</a></li>
                 </ul>
@@ -41,217 +44,396 @@
     </header>
 
     <main class="l-main">
-        <!--===== HOME =====-->
+        <!--===== HOME / HERO =====-->
         <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Adya Tiwari</span><br>I am into AI and development</h1>
+            <div class="home__container">
+                <span class="home__greeting">👋 Hi, I'm Adya Tiwari</span>
+                <h1 class="home__title">Building <span class="home__title-color">intelligent systems</span><br>that ship to production</h1>
+                <p class="home__role">AI / ML Engineer · LLMs · Computer Vision · Agentic Systems</p>
+                <p class="home__text">
+                    AI/ML Engineer with ~2 years of experience building LLM-powered systems, agentic workflows, and
+                    production AI features. Hands-on with prompt engineering, fine-tuning (QLoRA/PEFT), vector databases,
+                    and multi-model evaluation across GPT, Gemini, Llama, and Claude. Track record of reducing
+                    hallucinations, cutting costs, and shipping reliably in fast-paced environments.
+                </p>
 
-                <a href="#contact" class="button">Contact</a>
-                <a href="assets\img\Adya_Tiwari_CV.pdf" class="button" download="Adya_resume.pdf" style="margin: 10px;">Download my Resume</a>
+                <div class="home__stats">
+                    <div class="stat">
+                        <div class="stat__number">~2 yrs</div>
+                        <div class="stat__label">AI/ML Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">~60%</div>
+                        <div class="stat__label">Hallucinations Cut</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">200+</div>
+                        <div class="stat__label">LeetCode Solved</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">96%</div>
+                        <div class="stat__label">Model Accuracy</div>
+                    </div>
+                </div>
+
+                <div class="home__actions">
+                    <a href="#contact" class="button"><i class='bx bx-envelope'></i> Get in touch</a>
+                    <a href="assets/img/Adya_Tiwari_CV.pdf" class="button button--ghost" download="Adya_Tiwari_Resume.pdf"><i class='bx bx-download'></i> Download Resume</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/adya-tiwari-71a06b21b/" class="home__social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/adya14" class="home__social-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    <a href="https://leetcode.com/u/adya_twr14/" class="home__social-icon" aria-label="LeetCode" target="_blank" rel="noopener"><i class='bx bx-code-alt'></i></a>
+                    <a href="mailto:adyatwr@gmail.com" class="home__social-icon" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                </div>
             </div>
-
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/adya-tiwari-71a06b21b/" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/adya14" class="home__social-icon"><i class='bx bxl-github'></i></a>
-            </div>
-
         </section>
 
         <!--===== ABOUT =====-->
-        <section class="about section " id="about">
+        <section class="about section" id="about">
             <h2 class="section-title">About</h2>
-
             <div class="about__container">
-                <div>
-                    <h2 class="about__subtitle">Hi! I'am Adya Tiwari</h2>
-                    <p class="about__text">With a strong passion for Artificial Intelligence I, I possess a
-                        comprehensive understanding of Neural Networks and Machine Learning.</p>
-                    <!-- <p class="about__text">My primary focus lies in frontend design, where I can bring captivating and
-                        user-friendly interfaces to life.
-                        With 3+ months of experience using Figma, I have honed my skills in creating visually appealing
-                        and intuitive designs that enhance the user experience.</p> -->
-                    <p class="about__text">I would love to collaborate and help bring research and projects to life.</p>
-                    <br>
-                    <p class="about__text">▶ You can also read my blogs from <a href="blog.html">here</a>.</p>
+                <p class="about__text">
+                    I'm an <span class="about__highlight">AI/ML Engineer</span> who loves turning research into reliable,
+                    real-world products. My work spans <span class="about__highlight">large language models</span>,
+                    <span class="about__highlight">multi-agent systems</span>, <span class="about__highlight">computer vision</span>,
+                    and <span class="about__highlight">deep learning</span> — from fine-tuning and RAG pipelines to
+                    CNN-based vision models.
+                </p>
+                <p class="about__text">
+                    I've architected persistent memory systems, deployed multi-agent AI with tool integrations, and
+                    built vision pipelines achieving 95%+ accuracy. I care about shipping models that are accurate,
+                    cost-efficient, and dependable in production.
+                </p>
+                <p class="about__text">
+                    ▶ You can also read my technical blogs and research <a href="blog.html">here</a>.
+                </p>
+            </div>
+        </section>
+
+        <!--===== EXPERIENCE =====-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <div class="exp card">
+                    <div class="exp__date">Jun 2025 – Present</div>
+                    <div class="exp__body">
+                        <div class="exp__role">AI/ML Engineer</div>
+                        <div class="exp__company">Memorae</div>
+                        <ul class="exp__list">
+                            <li>Architected Memorae's core memory system enabling persistent user context storage and retrieval across AI agents, directly driving personalization and long-term retention.</li>
+                            <li>Built and deployed a multi-agent AI system (Memory, Reminder, Task, and Support Agents) with Google Workspace integrations through MCP.</li>
+                            <li>Reduced hallucinations by ~60% and cut token costs by designing prompt architectures and evaluating GPT, Gemini, Claude, and Llama to select the optimal model per use case.</li>
+                            <li>Owned production debugging independently as the primary on-call engineer, resolving live issues across the AI pipeline and ensuring system reliability.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">MCP</span>
+                            <span class="tag">Prompt Engineering</span><span class="tag">RAG</span><span class="tag">Vector DBs</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="exp card">
+                    <div class="exp__date">Aug 2024 – May 2025</div>
+                    <div class="exp__body">
+                        <div class="exp__role">AI Engineer</div>
+                        <div class="exp__company">Shoppin'</div>
+                        <ul class="exp__list">
+                            <li>Built a clothing recognition pipeline using ML models and Instagram APIs to automate outfit discovery from user-submitted images.</li>
+                            <li>Improved prompt quality and model performance for web scraping and product-matching workflows.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span><span class="tag">ML Pipelines</span>
+                            <span class="tag">Image Recognition</span><span class="tag">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp card">
+                    <div class="exp__date">Jan 2024 – Jul 2024</div>
+                    <div class="exp__body">
+                        <div class="exp__role">AI Research Intern</div>
+                        <div class="exp__company">Singapore University of Technology and Design (SUTD)</div>
+                        <ul class="exp__list">
+                            <li>Developed a CNN-based nutritional value prediction model achieving 95% accuracy using Python and Keras.</li>
+                            <li>Applied transfer learning on TripoSR for food 3D-printing research applications.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">CNN</span><span class="tag">Transfer Learning</span>
+                            <span class="tag">Keras</span><span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== PROJECTS =====-->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects__grid">
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">Fine-Tune LLM (Llama 2)</h3>
+                        <a href="https://github.com/adya14" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        Fine-tuned Meta Llama 2 using Parameter-Efficient Fine-Tuning (PEFT), specifically QLoRA.
+                        Improved output accuracy and reduced hallucinations through targeted domain adaptation.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Llama 2</span><span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">Fine-Tuning</span>
+                    </div>
+                </div>
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">AI Interviewer</h3>
+                        <a href="https://github.com/adya14" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        Built a voice-based AI interviewer using LLMs and Twilio that automatically calls candidates,
+                        asks role-specific questions, and conducts a full interview. Implemented dynamic Q&amp;A logic and
+                        automated response scoring with Node.js and prompt-driven LLM orchestration.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">LLMs</span><span class="tag">Twilio</span><span class="tag">Node.js</span><span class="tag">Voice AI</span>
+                    </div>
+                </div>
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">Pneumonia Detection</h3>
+                        <a href="https://github.com/adya14" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        Developed a CNN model for pneumonia detection from X-ray images using Python and Keras.
+                        Achieved 96% detection accuracy and reduced false positives through Adam optimizer tuning.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">CNN</span><span class="tag">Computer Vision</span><span class="tag">Keras</span><span class="tag">Medical AI</span>
+                    </div>
+                </div>
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">Intruder Detection System</h3>
+                        <a href="https://github.com/adya14/Intruder-detection-system" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        Real-time intruder detection using Computer Vision and Digital Image Processing in Python.
+                        Built with OpenCV, Pandas, and Matplotlib for day-and-night-vision feature extraction and
+                        classification.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">OpenCV</span><span class="tag">Image Processing</span><span class="tag">Python</span><span class="tag">Real-Time</span>
+                    </div>
+                </div>
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">Cryptico 🪙</h3>
+                        <a href="https://github.com/adya14/Criptico" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        A React web app providing live cryptocurrency data — price, market cap, trading volume — along
+                        with the latest crypto news to keep users updated.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="project card">
+                    <div class="project__head">
+                        <h3 class="project__title">Caffeine Connect ☕</h3>
+                        <a href="https://github.com/adya14/CoffeeCaps" class="project__link" aria-label="View on GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                    <p class="project__text">
+                        A community portal built on the MERN stack bringing together coffee lovers and professionals to
+                        connect, share knowledge, and build a vibrant community.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node.js</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills__grid">
 
-            <div class="skills__container">
-                <div>
-                    <p class="skills__text">A Proactive learner, constantly seeking opportunities to enhance skills and
-                        expand knowledge in the rapidly evolving field of AI. </p>
-                    <h2 class="skills__subtitle">Languages and Tools</h2>
-                    <ul class="skills__list">
-                        <li class="skills__item"><i class="bx bxl-neural"></i>Neural Networks</li>
-                                                <li class="skills__item"><i class="bx bxl-neural"></i>Deep Learning</li>
-                        <li class="skills__item"><i class="bx bxl-machine"></i>Machine Learning</li>
-                        <!-- <li class="skills__item"><i class="bx bxl-html5"></i>HTML</li>
-                        <li class="skills__item"><i class="bx bxl-css3"></i>CSS</li> -->
-                        <!-- <li class="skills__item"> <svg role="img"  width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor" height="200" width="200"><title>Jasmine</title><path d="M11.591 19.649h.771v-3.786h-.77zm-6.874-5.03l-.238-.733 3.6-1.17.238.735-3.6 1.17m4.645-5.762L7.138 5.796l.624-.453 2.224 3.062-.624.454m5.315.028l-.624-.454 2.225-3.062.624.453-2.225 3.063m4.592 5.78l-3.6-1.17.238-.734 3.6 1.17-.238.733M12 .001C5.383.001 0 5.384 0 11.998 0 18.617 5.383 24 12 24s12-5.382 12-12c0-6.617-5.383-12-12-12zm0 2.43c5.284 0 9.569 4.283 9.569 9.567 0 5.287-4.285 9.573-9.569 9.573-5.286 0-9.57-4.286-9.57-9.573 0-5.284 4.285-9.567 9.57-9.567m1.552 7.96l.575 1.768.747.242 4.736-1.538-.86-2.645-4.736 1.539-.462.635m.337 2.5l-1.504 1.093v.785l2.927 4.03 2.25-1.636-2.927-4.029-.746-.243m-2.275 1.093l-1.504-1.093-.747.243-2.927 4.029 2.25 1.635 2.928-4.029v-.785M9.873 12.16l.574-1.767-.462-.635-4.736-1.54-.86 2.646 4.737 1.54.747-.244m1.198-2.22h1.859l.462-.636v-4.98H10.61v4.98l.461.636" id="mainIconPathAttribute"></path></svg></i>Jasmine</li> -->
-                        <!-- <li class="skills__item"><i class="bx bxl-bootstrap"></i>Bootstrap</li> -->
-                        <li class="skills__item"><i class="bx bxl-javascript"></i>JavaScript</li>
-                        <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);">
-                                <path
-                                    d="M13.74 4.23c-.84-1-1.57-2-1.71-2.22H12c-.14.21-.87 1.22-1.71 2.22-7.2 9.19 1.14 15.39 1.14 15.39l.07.05c.06.95.22 2.33.22 2.33h.62s.15-1.37.21-2.33l.07-.06s8.32-6.19 1.12-15.38zM12 19.48a3.48 3.48 0 0 1-.48-.48L12 9l.45 10a3.57 3.57 0 0 1-.45.48z">
-                                </path>
-                            </svg>
-                            MongoDB
-                        </li>
+                <div class="skill__group card">
+                    <h3><i class='bx bx-brain'></i> AI / ML</h3>
+                    <div class="tags">
+                        <span class="tag">Generative AI</span><span class="tag">Agentic AI</span><span class="tag">LLMs</span>
+                        <span class="tag">Multi-Agent Systems</span><span class="tag">RAG</span>
+                        <span class="tag">Fine-Tuning (QLoRA/PEFT)</span><span class="tag">Prompt Engineering</span>
+                        <span class="tag">NLP</span><span class="tag">Deep Learning</span><span class="tag">Neural Networks</span>
+                        <span class="tag">Machine Learning</span><span class="tag">Computer Vision</span><span class="tag">CNNs</span>
+                        <span class="tag">Transfer Learning</span><span class="tag">Model Evaluation</span>
+                    </div>
+                </div>
 
-                        <!-- <li class="skills__item">Postman</li> -->
-                        <li class="skills__item"><i class="bx bxl-react"></i>React</li>
-                        <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);"> 
-                                <path
-                                    d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554zm-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57z">
-                                </path>
-                                <path
-                                    d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451zm-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57z">
-                                </path>
-                            </svg>
-                            Python
-                        </li>
+                <div class="skill__group card">
+                    <h3><i class='bx bxl-python'></i> Python Ecosystem</h3>
+                    <div class="tags">
+                        <span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">PySpark</span>
+                        <span class="tag">Scikit-Learn</span><span class="tag">TensorFlow</span><span class="tag">Keras</span>
+                        <span class="tag">PyTorch</span><span class="tag">OpenCV</span><span class="tag">Matplotlib</span>
+                    </div>
+                </div>
 
-                        <!-- <li class="skills__item"><i class="bx bxl-github"></i>Github</li> -->
-                        <li class="skills__item"><i class="bx bxl-git"></i>Git</li>
-                        <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);">
-                                <path
-                                    d="M9.37 17.51c-3.09.86 1.87 2.64 5.8 1a7.18 7.18 0 0 1-1.1-.54 11.59 11.59 0 0 1-4.16.18c-1.31-.15-.54-.64-.54-.64zm5.33-1.68a16.27 16.27 0 0 1-5.36.26c-1.31-.14-.45-.77-.45-.77-3.4 1.12 1.89 2.4 6.64 1a2.25 2.25 0 0 1-.83-.49zm1.82-9.73s-6.87 1.71-3.59 5.49a1.47 1.47 0 0 1-.25 2.12s2.46-1.27 1.33-2.86-1.86-2.22 2.51-4.75z">
-                                </path>
-                                <path
-                                    d="M18.13 19.14s.56.46-.63.82c-2.27.69-9.43.9-11.42 0-.72-.31.62-.74 1-.83a2.54 2.54 0 0 1 .69-.08c-.8-.56-5.15 1.1-2.21 1.58 8.05 1.37 14.64-.56 12.57-1.49zm-2.76-4.88a7 7 0 0 1 .92-.49s-1.51.27-3 .4a28.11 28.11 0 0 1-4.82.05C6.09 13.91 9.74 13 9.74 13a6.81 6.81 0 0 0-3.16.75c-2.06 1.03 5.09 1.48 8.79.51zm.91 2.44a.39.39 0 0 1-.08.09c5-1.32 3.18-4.65.78-3.81a.71.71 0 0 0-.33.25s.14-.05.43-.12c1.22-.25 2.92 1.63-.8 3.59zM12 13c-.74-1.67-3.26-3.14 0-5.71C16.09 4.08 14 2 14 2c.84 3.31-3 4.31-4.34 6.37-.93 1.41.47 2.92 2.34 4.63z">
-                                </path>
-                                <path
-                                    d="M16.41 21.32a29.75 29.75 0 0 1-9.14.14s.46.38 2.84.53c3.61.23 9.15-.12 9.29-1.83 0 0-.26.64-2.99 1.16z">
-                                </path>
-                            </svg>
-                            Java
-                        </li>
+                <div class="skill__group card">
+                    <h3><i class='bx bx-code-alt'></i> Languages</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Node.js</span>
+                        <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Excel</span>
+                    </div>
+                </div>
 
-                        <li class="skills__item"><i class="bx bxl-figma"></i>Figma</li>
-                        <!-- <li class="skills__item"><i class="bx bxl-express"></i>Express</li> -->
-                        <!-- <li class="skills__item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                style="fill: rgba(0, 0, 0, 1);">
-                                <path
-                                    d="M5.239 15.063 7.21 2.381a.453.453 0 0 1 .847-.145l2.12 3.979-4.938 8.848zM19.24 18.14 17.363 6.469a.454.454 0 0 0-.766-.246L4.76 18.14l6.55 3.691c.411.23.912.23 1.323 0l6.607-3.691zM13.917 7.955 12.4 5.052a.452.452 0 0 0-.8 0L4.939 16.989l8.978-9.034z">
-                                </path>
-                            </svg>
-                            Firebase
-                        </li> -->
-                    </ul>
+                <div class="skill__group card">
+                    <h3><i class='bx bx-layer'></i> Frameworks &amp; Libraries</h3>
+                    <div class="tags">
+                        <span class="tag">LangChain</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span>
+                        <span class="tag">Keras</span><span class="tag">Scikit-Learn</span><span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                </div>
+
+                <div class="skill__group card">
+                    <h3><i class='bx bx-data'></i> Data &amp; Vector Stores</h3>
+                    <div class="tags">
+                        <span class="tag">FAISS</span><span class="tag">Pinecone</span><span class="tag">Vector Databases</span>
+                        <span class="tag">MongoDB</span><span class="tag">SQL Databases</span><span class="tag">Embeddings</span>
+                    </div>
+                </div>
+
+                <div class="skill__group card">
+                    <h3><i class='bx bxl-google-cloud'></i> Cloud &amp; Infrastructure</h3>
+                    <div class="tags">
+                        <span class="tag">AWS</span><span class="tag">Google Cloud (GCP)</span><span class="tag">MCP</span>
+                        <span class="tag">Docker</span><span class="tag">REST APIs</span><span class="tag">Git &amp; Version Control</span>
+                    </div>
+                </div>
+
+                <div class="skill__group card">
+                    <h3><i class='bx bx-been-here'></i> CS Foundations</h3>
+                    <div class="tags">
+                        <span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Databases</span>
+                        <span class="tag">OOP</span><span class="tag">System Design Basics</span>
+                    </div>
+                </div>
+
+                <div class="skill__group card">
+                    <h3><i class='bx bx-trophy'></i> Competitive</h3>
+                    <div class="tags">
+                        <span class="tag">LeetCode 200+ Problems</span><span class="tag">Rating 1559 (Top 29%)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== CERTIFICATIONS =====-->
+        <section class="certifications section" id="certifications">
+            <h2 class="section-title">Certifications &amp; Learning</h2>
+            <div class="certs__grid">
+
+                <div class="cert card">
+                    <i class='bx bxl-google-cloud cert__icon'></i>
+                    <div>
+                        <h3 class="cert__title">30 Days of Google Cloud Program</h3>
+                        <p class="cert__issuer">Google</p>
+                        <a href="https://drive.google.com/file/d/1Qf5qaCfXYoKmX--ok8FXgTMNsObrI7Uv/view?usp=sharing" class="cert__link" target="_blank" rel="noopener">View Certificate <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="cert card">
+                    <i class='bx bxl-react cert__icon'></i>
+                    <div>
+                        <h3 class="cert__title">Advanced React</h3>
+                        <p class="cert__issuer">Coursera</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/KEY2WDEUEPRG?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" class="cert__link" target="_blank" rel="noopener">View Certificate <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="cert card">
+                    <i class='bx bx-brain cert__icon'></i>
+                    <div>
+                        <h3 class="cert__title">Advanced Learning Algorithms</h3>
+                        <p class="cert__issuer">Coursera</p>
+                        <a href="https://coursera.org/share/b851c407e2a3502a09d8a2d25a0dcfa6" class="cert__link" target="_blank" rel="noopener">View Certificate <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="cert card">
+                    <i class='bx bxl-youtube cert__icon'></i>
+                    <div>
+                        <h3 class="cert__title">100 Days of ML &amp; 100 Days of Deep Learning</h3>
+                        <p class="cert__issuer">CampusX (YouTube course)</p>
+                        <a href="https://www.youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH" class="cert__link" target="_blank" rel="noopener">View Course <i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== EDUCATION =====-->
+        <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="edu__grid">
+                <div class="edu card">
+                    <h3 class="edu__degree">B.Tech, Computer Science (AI)</h3>
+                    <p class="edu__school">NIIT University</p>
+                    <p class="edu__date">2020 – 2024</p>
+                </div>
+                <div class="edu card">
+                    <h3 class="edu__degree">Minor in Artificial Intelligence</h3>
+                    <p class="edu__school">IIT Ropar</p>
+                    <p class="edu__date">2024 – 2025</p>
                 </div>
             </div>
         </section>
 
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
-            <div class="contact__container bd-grid">
-                <div class="contact__info">
-                    <p>All my work is available at my github profile and the <a href="blog.html"> Blogs section</a> of
-                        this website.</p>
-                </div>
-
-                <div class="work__container bd-grid">
-                <div class="work__item">
-                    <a href="https://github.com/adya14/Criptico" class="work__img">
-                        <img src="assets/img/cryptico.png" alt="">
-                    </a>
-                    <div class="work__description"> <h4>Cryptico 🪙</h4> 
-                        <p>
-                            A React-based web application that provides information about various cryptocurrencies. It allows users to view details about individual cryptocurrencies, including their price, market cap, trading volume, and more. It also shows latest new about Cryptocurrencies to keep users updated.                        
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="work__item">
-                    <a href="https://github.com/adya14/CoffeeCaps" class="work__img">
-                        <img src="assets/img/caff.png" alt="">
-                    </a>
-                    <div class="work__description"> <h4>Coffeine Connect ☕</h4> <p>Caffeine Connect is a community portal website built using MERN (MongoDB, Express.js, React.js, Node.js) technologies. It aims to bring together coffee lovers, enthusiasts, and professionals to connect, share knowledge, and foster a vibrant community around everything related to coffee.</p></div>
-                </div>
-                <div class="work__item">
-                    <a href="https://github.com/adya14/Intruder-detection-system" class="work__img">
-                        <img src="assets/img/intruder.png" alt="">
-                    </a>
-                    <div class="work__description"> <h4>Intruder detection system</h4> 
-                        <p>
-                            The project aims to utilize Computer Vision (CV) and Digital Image Processing (DIP) concepts to detect intruders in a given environment using Python in real time. OpenCV, Pandas, and Matplotlib libraries have been employed to implement the solution.                        </p>
-                    </div>
-                </div>
-                    <!-- <a href="https://github.com/adya14/CRUD" class="work__img">
-                        <img src="assets/img/crud.png" alt="">
-                    </a>
-                    <a href="https://www.codingninjas.com/studio/library/creating-a-basic-project-in-sinatra"
-                        class="work__img">
-                        <img src="assets/img/blog.png" alt="">
-                    </a>
-                    <a href="https://github.com/adya14/tvMaze-React-Website" class="work__img">
-                        <img src="assets/img/tv-maze.png" alt="">
-                    </a>
-                    <a href="https://github.com/adya14/Transport-dashboard" class="work__img">
-                        <img src="assets/img/transport-web.png" alt="">
-                    </a> -->
-                </div>
-        </section>
-
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact__container bd-grid">
-            <div class="contact__info">
-                <h3 class="contact__subtitle">Get in touch</h3>
-                <p class="contact__text">If you're seeking more blogs on various technology-related topics, feel free to
-                    reach out to me:</p>
-
-                <div class="contact__info">
-                    <div class="contact__data">
-                        <a href="mailto:yourname@example.com" class="contact__link">
-                            <i class="bx bx-envelope contact__icon"></i>
-                            adyatwr@gmail.com
-                        </a>
-                    </div>
-                    <div class="contact__data">
-                        <a href="https://www.linkedin.com/in/adya-tiwari-71a06b21b/" class="contact__link">
-                            <i class="bx bxl-linkedin-square contact__icon"></i>
-                            LinkedIn
-                        </a>
-                    </div>
-                    <div class="contact__data">
-                        <a href="https://github.com/adya14" class="contact__link">
-                            <i class="bx bxl-github contact__icon"></i>
-                            GitHub
-                        </a>
-                    </div>
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact__container">
+                <p class="contact__text">
+                    I'm open to AI/ML, Computer Vision, and LLM engineering roles. Whether you want to collaborate on
+                    research, build something, or just talk shop — feel free to reach out.
+                </p>
+                <div class="contact__links">
+                    <a href="mailto:adyatwr@gmail.com" class="contact__card"><i class='bx bx-envelope'></i> adyatwr@gmail.com</a>
+                    <a href="tel:+918851619182" class="contact__card"><i class='bx bx-phone'></i> +91 88516 19182</a>
+                    <a href="https://www.linkedin.com/in/adya-tiwari-71a06b21b/" class="contact__card" target="_blank" rel="noopener"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+                    <a href="https://github.com/adya14" class="contact__card" target="_blank" rel="noopener"><i class='bx bxl-github'></i> GitHub</a>
+                    <a href="https://leetcode.com/u/adya_twr14/" class="contact__card" target="_blank" rel="noopener"><i class='bx bx-code-alt'></i> LeetCode</a>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/adya-tiwari-71a06b21b/" class="footer__icon" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/adya14" class="footer__icon" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+            <a href="https://leetcode.com/u/adya_twr14/" class="footer__icon" target="_blank" rel="noopener"><i class='bx bx-code-alt'></i></a>
+            <a href="mailto:adyatwr@gmail.com" class="footer__icon"><i class='bx bx-envelope'></i></a>
         </div>
-    </section>
+        <p class="footer__copy">© 2026 Adya Tiwari · Built &amp; designed with 💜</p>
+    </footer>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__copy">&#169; All rights reserved</p>
-        </footer>
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
