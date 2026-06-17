@@ -186,8 +186,8 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 /* Mobile type/spacing tweaks */
 @media screen and (max-width: 480px) {
   :root { --big-font-size: 1.85rem; }
-  .section { padding: 3rem var(--mb-2) 1.5rem; }
-  .home { padding: 3.5rem var(--mb-2) 1rem; }
+  .section { padding: 3rem 1.4rem 1.5rem; }
+  .home { padding: 3.5rem 1.4rem 1rem; }
   .blogs__container { gap: 1.5rem; }
   .contact__info { flex-direction: column; }
   .contact__link { width: 100%; justify-content: center; }

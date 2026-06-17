@@ -594,8 +594,8 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 /* Phones (landscape) and below */
 @media screen and (max-width: 767px) {
   :root { --big-font-size: 2.1rem; }
-  .section { padding: 3rem var(--mb-2) 1.5rem; }
-  .home { padding: 3.5rem var(--mb-2) 2rem; }
+  .section { padding: 3rem 1.4rem 1.5rem; }
+  .home { padding: 3.5rem 1.4rem 2rem; }
   .home__title { font-size: var(--big-font-size); }
   .exp { grid-template-columns: 1fr; gap: .4rem; }
   .home__stats { gap: 1.5rem 2rem; }
@@ -612,7 +612,7 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
     --h2-font-size: 1.3rem;
     --h3-font-size: 1.05rem;
   }
-  .home { padding: 3rem var(--mb-2) 1.5rem; }
+  .home { padding: 3rem 1.4rem 1.5rem; }
   .home__greeting { white-space: normal; }
   .home__role { font-size: 1rem; }
 
