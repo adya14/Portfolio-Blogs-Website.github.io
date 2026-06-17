@@ -399,6 +399,16 @@ a:hover { color: var(--first-color); }
   left: 0;
   color: var(--accent-color);
 }
+.exp__cert {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .25rem;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--accent-color);
+}
+.exp__cert:hover { color: var(--first-color); }
 
 /*===== TAGS / CHIPS =====*/
 .tags { display: flex; flex-wrap: wrap; gap: .45rem; }
