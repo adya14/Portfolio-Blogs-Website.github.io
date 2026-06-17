@@ -68,7 +68,7 @@ a { color: var(--accent-color); text-decoration: none; transition: color .2s eas
 a:hover { color: var(--first-color); }
 
 /*===== REUSABLE =====*/
-.section { padding: 4rem 0 2rem; }
+.section { padding: 4rem var(--mb-2) 2rem; }
 
 .section-title {
   position: relative;
@@ -186,15 +186,15 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 /* Mobile type/spacing tweaks */
 @media screen and (max-width: 480px) {
   :root { --big-font-size: 1.85rem; }
-  .section { padding: 3rem 0 1.5rem; }
-  .home { padding: 3.5rem 0 1rem; }
+  .section { padding: 3rem var(--mb-2) 1.5rem; }
+  .home { padding: 3.5rem var(--mb-2) 1rem; }
   .blogs__container { gap: 1.5rem; }
   .contact__info { flex-direction: column; }
   .contact__link { width: 100%; justify-content: center; }
 }
 
 /*===== HOME / WELCOME =====*/
-.home { padding: 5rem 0 1rem; }
+.home { padding: 5rem var(--mb-2) 1rem; }
 .home__data { max-width: 760px; }
 .home__title {
   font-size: var(--big-font-size);
