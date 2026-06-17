@@ -105,7 +105,8 @@ a:hover { color: var(--first-color); }
   position: fixed;
   top: 0; left: 0;
   z-index: var(--z-fixed);
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: #ffffff;                 /* solid fallback */
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 12px rgba(113, 19, 164, 0.08);
@@ -143,22 +144,54 @@ a:hover { color: var(--first-color); }
 .nav__toggle { color: var(--second-color); font-size: 1.5rem; cursor: pointer; }
 
 @media screen and (max-width: 767px) {
+  .l-header { background-color: #ffffff; }
   .nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 72%;
-    height: 100%;
+    width: 78%;
+    max-width: 320px;
+    height: calc(100vh - var(--header-height));
     padding: 2.5rem 1.75rem;
     background-color: var(--second-color);
-    transition: .4s;
+    transition: right .35s ease;
+    box-shadow: -8px 0 28px rgba(0, 0, 0, 0.35);
+    overflow-y: auto;
   }
-  .nav__link { color: #fff; font-size: 1rem; }
+  .nav__list { flex-direction: column; }
+  .nav__item { margin-bottom: var(--mb-4); }
+  .nav__link { display: block; color: #fff; font-size: 1.05rem; padding: .35rem 0; }
+  .nav__link:hover { color: #fff; }
+
+  .nav__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 12, 35, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease;
+    z-index: calc(var(--z-fixed) - 1);
+  }
+  .nav__overlay.show { opacity: 1; visibility: visible; }
 }
 @media screen and (min-width: 768px) {
   .nav__toggle { display: none; }
+  .nav__overlay { display: none; }
 }
 .show { right: 0 !important; }
+
+/* Offset anchored sections so the fixed header never covers their tops */
+section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
+
+/* Mobile type/spacing tweaks */
+@media screen and (max-width: 480px) {
+  :root { --big-font-size: 1.85rem; }
+  .section { padding: 3rem 0 1.5rem; }
+  .home { padding: 3.5rem 0 1rem; }
+  .blogs__container { gap: 1.5rem; }
+  .contact__info { flex-direction: column; }
+  .contact__link { width: 100%; justify-content: center; }
+}
 
 /*===== HOME / WELCOME =====*/
 .home { padding: 5rem 0 1rem; }

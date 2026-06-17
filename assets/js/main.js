@@ -1,25 +1,42 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+/*==================== MOBILE MENU ====================*/
+(function mobileMenu() {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('nav-menu');
+  if (!toggle || !nav) return;
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  }
-};
-showMenu('nav-toggle', 'nav-menu');
+  const icon = toggle.querySelector('i');
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link');
+  // Dim overlay behind the open menu (created here so both pages get it)
+  const overlay = document.createElement('div');
+  overlay.className = 'nav__overlay';
+  document.body.appendChild(overlay);
 
-function linkAction() {
-  const navMenu = document.getElementById('nav-menu');
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove('show');
-}
-navLink.forEach((n) => n.addEventListener('click', linkAction));
+  const openMenu = () => {
+    nav.classList.add('show');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    if (icon) { icon.classList.remove('bx-menu'); icon.classList.add('bx-x'); }
+  };
+
+  const closeMenu = () => {
+    nav.classList.remove('show');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+    if (icon) { icon.classList.remove('bx-x'); icon.classList.add('bx-menu'); }
+  };
+
+  toggle.addEventListener('click', () => {
+    nav.classList.contains('show') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  document.querySelectorAll('.nav__link').forEach((n) => n.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+  // Reset if the viewport grows back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+})();
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]');

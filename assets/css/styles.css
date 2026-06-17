@@ -116,7 +116,8 @@ a:hover { color: var(--first-color); }
   position: fixed;
   top: 0; left: 0;
   z-index: var(--z-fixed);
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: #ffffff;                 /* solid fallback */
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 12px rgba(113, 19, 164, 0.08);
@@ -173,25 +174,51 @@ a:hover { color: var(--first-color); }
 }
 
 @media screen and (max-width: 767px) {
+  /* Solid header on mobile so the logo + menu icon are always clearly visible */
+  .l-header { background-color: #ffffff; }
+
   .nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 72%;
-    height: 100%;
+    width: 78%;
+    max-width: 320px;
+    height: calc(100vh - var(--header-height));
     padding: 2.5rem 1.75rem;
-    background-color: var(--second-color);
-    transition: .4s;
-    box-shadow: -4px 0 24px rgba(0,0,0,.2);
+    background-color: var(--second-color);   /* solid dark panel */
+    transition: right .35s ease;
+    box-shadow: -8px 0 28px rgba(0, 0, 0, 0.35);
+    overflow-y: auto;
   }
   .nav__list { flex-direction: column; }
   .nav__item { margin-bottom: var(--mb-4); }
-  .nav__link { color: #fff; font-size: 1rem; }
-  .nav__link:hover { color: #fff; }
+  .nav__link {
+    display: block;
+    color: #fff;
+    font-size: 1.05rem;
+    padding: .35rem 0;
+  }
+  .nav__link:hover,
+  .nav__link.active { color: #fff; }
+  .nav__link.active::after,
+  .nav__link:hover::after { background: #fff; }
+
+  /* Dim overlay behind the open menu */
+  .nav__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 12, 35, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease;
+    z-index: calc(var(--z-fixed) - 1);
+  }
+  .nav__overlay.show { opacity: 1; visibility: visible; }
 }
 @media screen and (min-width: 768px) {
   .nav__item { margin-left: var(--mb-5); }
   .nav__toggle { display: none; }
+  .nav__overlay { display: none; }
 }
 
 .show { right: 0 !important; }
@@ -556,7 +583,65 @@ a:hover { color: var(--first-color); }
 }
 
 /*===== RESPONSIVE =====*/
-@media screen and (max-width: 600px) {
-  .exp { grid-template-columns: 1fr; gap: .5rem; }
-  .home__stats { gap: 1.5rem; }
+/* Offset anchored sections so the fixed header never covers their tops */
+section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
+
+/* Tablets & small laptops */
+@media screen and (max-width: 900px) {
+  .bd-grid { max-width: 720px; }
+}
+
+/* Phones (landscape) and below */
+@media screen and (max-width: 767px) {
+  :root { --big-font-size: 2.1rem; }
+  .section { padding: 3rem 0 1.5rem; }
+  .home { padding: 3.5rem 0 2rem; }
+  .home__title { font-size: var(--big-font-size); }
+  .exp { grid-template-columns: 1fr; gap: .4rem; }
+  .home__stats { gap: 1.5rem 2rem; }
+  .projects__grid,
+  .skills__grid,
+  .certs__grid,
+  .edu__grid { grid-template-columns: 1fr; }
+}
+
+/* Phones (portrait) */
+@media screen and (max-width: 480px) {
+  :root {
+    --big-font-size: 1.85rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1.05rem;
+  }
+  .home { padding: 3rem 0 1.5rem; }
+  .home__greeting { white-space: normal; }
+  .home__role { font-size: 1rem; }
+
+  /* Stats: clean 2-up grid instead of an uneven wrap */
+  .home__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .stat__number { font-size: 1.35rem; }
+
+  /* Full-width, comfortably tappable buttons */
+  .home__actions { flex-direction: column; align-items: stretch; gap: .75rem; }
+  .button { width: 100%; justify-content: center; padding: .9rem 1.5rem; }
+
+  .home__social { justify-content: flex-start; gap: 1.5rem; }
+  .home__social-icon { font-size: 1.6rem; }
+
+  .exp, .project, .skill__group, .cert, .edu { padding: 1.25rem 1.2rem; }
+  .exp__role { font-size: 1.1rem; }
+
+  /* Contact links stack full-width for easy tapping */
+  .contact__links { flex-direction: column; }
+  .contact__card { width: 100%; justify-content: center; }
+
+  .tag { font-size: .72rem; }
+}
+
+/* Very small phones */
+@media screen and (max-width: 340px) {
+  .home__stats { grid-template-columns: 1fr; }
 }
